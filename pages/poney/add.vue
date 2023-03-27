@@ -1,8 +1,8 @@
 <template>
     <div class="page page-poney__add">
         <div class="flex gap-x-3">
+            <Button to="/poney">Retour</Button>
             <h1 class="text-3xl font-bold">Ajouter un poney</h1>
-            <Button to="/poney">Voir la liste</Button>
         </div>
         <AddForm :ponies="ponies"/>
     </div>

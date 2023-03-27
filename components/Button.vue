@@ -4,9 +4,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
     name: 'ButtonComponent',
     props: [
         'text',
@@ -17,8 +17,8 @@ export default {
     ],
     data() {
         return {
-            classes: 'py-3 px-5 bg-slate-100 hover:bg-slate-200 transition rounded-lg w-max'
+            classes: 'block py-3 px-5 bg-slate-100 hover:bg-slate-200 transition rounded-lg w-max'
         }
     }
-}
+});
 </script>

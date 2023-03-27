@@ -1,14 +1,14 @@
 <template>
-    <li :key="poney.id">
+    <li>
         N°{{ poney.id }} : {{ poney.name }}
         <button @click="deleteItem">x</button>
     </li>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
     name: 'DetailsComponents',
     props: {
         poney: {
@@ -24,5 +24,5 @@ export default {
             this.$emit('delete', this.poney);
         },
     }
-}
+});
 </script>

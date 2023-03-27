@@ -8,15 +8,15 @@
             <Button type="submit" :click="createPony">Envoyer</Button>
         </form>
         <ul class="ponies">
-            <Details v-for="poney in ponies" :poney="poney" v-on:delete="deletePony"/>
+            <Details v-for="poney in ponies" :key="poney.id" :poney="poney" v-on:delete="deletePony"/>
         </ul>
     </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
     name: 'AddFormComponent',
     props: {
         ponies: {
@@ -43,10 +43,10 @@ export default {
             this.ponies.push(poney);
             
         },
-        deletePony(item) {
+        deletePony(item: Object) {
             this.ponies.splice(this.ponies.indexOf(item), 1);
             
         }
     }
-}
+});
 </script>

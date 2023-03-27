@@ -1,6 +1,7 @@
 <template>
     <div class="page page-poney">
         <div class="flex gap-x-3">
+            <Button to="/">Retour</Button>
             <h1 class="text-3xl font-bold">List des poney</h1>
             <Button to="/poney/add">Ajouter</Button>
         </div>
