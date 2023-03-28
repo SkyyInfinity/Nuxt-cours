@@ -1,4 +1,4 @@
-export default class Poney {
+export default class Post {
     public id: number;
     public userId: number;
     public title: string;

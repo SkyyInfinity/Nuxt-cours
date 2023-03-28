@@ -1,8 +1,8 @@
-import PoneyService from "~/services/Poney.service";
+import PostService from "~/services/Post.service";
 
 export default (ctx, inject) => {
     const services = {
-        posts: new PoneyService(ctx.$axios)
+        posts: new PostService(ctx.$axios)
     }
     
     inject('services', services)
