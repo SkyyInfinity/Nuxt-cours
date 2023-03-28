@@ -13,7 +13,10 @@ import Vue from 'vue';
 
 export default Vue.extend({
     name: 'PoneyAddPage',
-    data() {
+    async asyncData(ctx) {
+        const data = await ctx.app.$services.posts.findAll();
+        console.log(data);
+
         return {
             ponies: [
                 {
@@ -28,8 +31,14 @@ export default Vue.extend({
                     id: 3,
                     name: 'Blue'
                 }
-            ]
+            ],
+            posts: data
         }
-    }
+    },
+    data() {
+        return {
+            ponies: Array
+        }
+    }, 
 })
 </script>
