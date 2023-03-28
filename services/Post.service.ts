@@ -15,12 +15,12 @@ export default class PostService {
         return await this.axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res: any) => res.data);
     }
 
-    async add(data: object) {
+    async add(data: Post) {
         return await this.axios.post('https://jsonplaceholder.typicode.com/posts', data, {
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             }
-        }).then((res: any) => res.statusText);
+        }).then((res: any) => res.data);
     }
 
     async delete(id: number) {

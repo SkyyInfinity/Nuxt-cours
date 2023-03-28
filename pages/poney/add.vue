@@ -13,18 +13,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
     name: 'PoneyAddPage',
-    async asyncData(ctx) {
-        const all = await ctx.app.$services.posts.findAll();
-        console.log('findAll', all);
-
-        const one = await ctx.app.$services.posts.findOne(2);
-        console.log('findOne', one);
-
-        const addResult = await ctx.app.$services.posts.add({ title: 'foo', body: 'bar', userId: 1 });
-        console.log('add', addResult);
-        
-        const deleteResult = await ctx.app.$services.posts.delete(3);
-        console.log('delete', deleteResult);
+    asyncData() {
 
         return {
             ponies: [
@@ -40,8 +29,7 @@ export default Vue.extend({
                     id: 3,
                     name: 'Blue'
                 }
-            ],
-            posts: all
+            ]
         }
     },
     data() {

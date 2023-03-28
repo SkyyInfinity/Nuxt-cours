@@ -4,7 +4,7 @@
             <Button to="/post">Retour</Button>
             <h1 class="text-3xl font-bold">Ajouter un article</h1>
         </div>
-        <AddPost :posts="posts"/>
+        <AddPost />
     </div>
 </template>
 
@@ -12,11 +12,6 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-    name: 'PostAddPage',
-    data() {
-        return {
-            posts: Array
-        }
-    }, 
+    name: 'PostAddPage', 
 })
 </script>
