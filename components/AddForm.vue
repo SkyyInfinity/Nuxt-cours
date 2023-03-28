@@ -22,7 +22,7 @@ export default defineComponent({
         ponies: {
             type: Array,
             default() {
-                return {};
+                return [];
             }
         },
     },
